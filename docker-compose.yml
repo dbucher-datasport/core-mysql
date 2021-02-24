@@ -1,0 +1,95 @@
+version: "3.6"
+services:
+  management1:
+    image: mysql/mysql-cluster
+    container_name: management1
+    volumes:
+      - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./my.cnf:/etc/my.cnf
+    network_mode: host
+    ports:
+      - 3306:3306
+      - 33060:33060
+      - 2202:2202
+      - 1186:1186
+    command: ndb_mgmd
+  management2:
+    image: mysql/mysql-cluster
+    container_name: management2
+    volumes:
+      - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./my.cnf:/etc/my.cnf
+    network_mode: host
+    ports:
+      - 3306:3306
+      - 33060:33060
+      - 2202:2202
+      - 1186:1186
+    command: ndb_mgmd  
+  ndb1:
+    image: mysql/mysql-cluster
+    container_name: ndb1
+    volumes:
+      - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./my.cnf:/etc/my.cnf
+    network_mode: host
+    ports:
+      - 3306:3306
+      - 33060:33060
+      - 2202:2202
+      - 1186:1186
+    command: ndbd
+  ndb2:
+    image: mysql/mysql-cluster
+    container_name: ndb2
+    volumes:
+      - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./my.cnf:/etc/my.cnf
+    network_mode: host
+    ports:
+      - 3306:3306
+      - 33060:33060
+      - 2202:2202
+      - 1186:1186
+    command: ndbd
+  ndb3:
+    image: mysql/mysql-cluster
+    container_name: ndb3
+    volumes:
+      - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./my.cnf:/etc/my.cnf
+    network_mode: host
+    ports:
+      - 3306:3306
+      - 33060:33060
+      - 2202:2202
+      - 1186:1186
+    command: ndbd
+  ndb4:
+    image: mysql/mysql-cluster
+    container_name: ndb4
+    volumes:
+      - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./my.cnf:/etc/my.cnf
+    network_mode: host
+    ports:
+      - 3306:3306
+      - 33060:33060
+      - 2202:2202
+      - 1186:1186
+    command: ndbd     
+  mysqld1:
+    image: mysql/mysql-cluster
+    container_name: mysqld1
+    volumes:
+      - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./my.cnf:/etc/my.cnf
+    network_mode: host
+    ports:
+      - 3306:3306
+      - 33060:33060
+      - 2202:2202
+      - 1186:1186
+    environment:
+      MYSQL_ROOT_PASSWORD: DS-Pass-2021
+    command: mysqld
