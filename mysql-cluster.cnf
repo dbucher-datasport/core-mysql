@@ -28,6 +28,10 @@ NoOfReplicas=2
 LateAlloc=1
 DataMemory=9858M
 IndexMemory=1760M
+MaxNoOfAttributes=16384
+MaxNoOfTables=1024
+MaxNoOfOrderedIndexes=1024
+MaxNoOfUniqueHashIndexes=1024
 
 [NDBD]
 NodeId=11
