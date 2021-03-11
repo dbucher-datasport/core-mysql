@@ -15,7 +15,7 @@ Portnumber=1186
 
 [NDB_MGMD]
 NodeId=2
-HostName=172.16.56.40
+HostName=172.16.82.113
 DataDir=/var/lib/mysql
 Portnumber=1186
 
@@ -41,7 +41,7 @@ ServerPort=11860
 
 [NDBD]
 NodeId=12
-HostName=172.16.56.40
+HostName=172.16.82.113
 DataDir=/var/lib/mysql
 ServerPort=11860
 
@@ -69,4 +69,4 @@ HostName=172.16.56.34
 
 [MYSQLD]
 NodeId=21
-HostName=172.16.56.40
+HostName=172.16.82.113
