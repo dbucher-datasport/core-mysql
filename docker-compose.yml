@@ -91,6 +91,7 @@ services:
       - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
       - ./my.cnf:/etc/my.cnf
       - ./data/:/var/lib/mysql
+      - ./log/:/var/log
     network_mode: host
     ports:
       - 3306:3306
