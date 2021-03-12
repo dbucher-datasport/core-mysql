@@ -50,6 +50,8 @@ services:
       - ./my.cnf:/etc/my.cnf
       - ./data:/var/lib/mysql
     network_mode: host
+    environment:
+      - ip: 172.16.82.114
     ports:
       - 3306:3306
       - 33060:33060
