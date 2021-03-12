@@ -103,3 +103,20 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: DS-Pass-2021
     command: mysqld
+   mysqld2:
+    image: mysql/mysql-cluster
+    container_name: mysqld2
+    volumes:
+      - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
+      - ./my.cnf:/etc/my.cnf
+      - ./data2:/var/lib/mysql
+      - ./log2:/var/log
+    network_mode: host
+    ports:
+      - 3306:3306
+      - 33060:33060
+      - 2202:2202
+      - 1186:1186
+    environment:
+      MYSQL_ROOT_PASSWORD: DS-Pass-2021
+    command: mysqld
