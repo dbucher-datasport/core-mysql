@@ -6,7 +6,7 @@ services:
     volumes:
       - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
       - ./my.cnf:/etc/my.cnf
-      - ./data/:/var/lib/mysql
+      - ./data:/var/lib/mysql
     network_mode: host
     ports:
       - 3306:3306
@@ -20,7 +20,7 @@ services:
     volumes:
       - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
       - ./my.cnf:/etc/my.cnf
-      - ./data/:/var/lib/mysql
+      - ./data:/var/lib/mysql
     network_mode: host
     ports:
       - 3306:3306
@@ -34,7 +34,7 @@ services:
     volumes:
       - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
       - ./my.cnf:/etc/my.cnf
-      - ./data/:/var/lib/mysql
+      - ./data:/var/lib/mysql
     network_mode: host
     ports:
       - 3306:3306
@@ -48,7 +48,7 @@ services:
     volumes:
       - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
       - ./my.cnf:/etc/my.cnf
-      - ./data/:/var/lib/mysql
+      - ./data:/var/lib/mysql
     network_mode: host
     ports:
       - 3306:3306
@@ -62,7 +62,7 @@ services:
     volumes:
       - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
       - ./my.cnf:/etc/my.cnf
-      - ./data/:/var/lib/mysql
+      - ./data:/var/lib/mysql
     network_mode: host
     ports:
       - 3306:3306
@@ -76,7 +76,7 @@ services:
     volumes:
       - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
       - ./my.cnf:/etc/my.cnf
-      - ./data/:/var/lib/mysql
+      - ./data:/var/lib/mysql
     network_mode: host
     ports:
       - 3306:3306
@@ -90,8 +90,8 @@ services:
     volumes:
       - ./mysql-cluster.cnf:/etc/mysql-cluster.cnf
       - ./my.cnf:/etc/my.cnf
-      - ./data/:/var/lib/mysql
-      - ./log/:/var/log
+      - ./data:/var/lib/mysql
+      - ./log:/var/log
     network_mode: host
     ports:
       - 3306:3306
